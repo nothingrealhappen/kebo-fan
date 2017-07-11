@@ -1,0 +1,7 @@
+<!--index.wxml-->
+<view class="container">
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image class="fan-bg" src="images/fan.png" background-size="cover"></image>
+    <text class="click-time">{{clickTime}}</text>
+  </view>
+</view>
