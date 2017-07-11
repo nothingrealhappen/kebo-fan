@@ -1,21 +1,73 @@
 /**index.wxss**/
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+page {
+  background-color: #efefef;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
+.container {
+  justify-content: center;
+}
+
+.fan {
+  position: relative;
+  width: 200px;
+  height: 400px;
+}
+
+.fan-bg {
+  background-color: white;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
 }
 
-.userinfo-nickname {
-  color: #aaa;
+.fan-stand {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 200px;
+  height: 200px;
+  background-size: cover;
 }
 
-.usermotto {
-  margin-top: 200px;
+.fan-interal {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-size: 100% 100%;
+  left: 0;
+  top: 0;
+  width: 200px;
+}
+
+.fan.is-active .fan-interal {
+  animation: rotate 500ms linear;
+  animation-iteration-count: infinite;
+}
+
+.fan-container {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-size: 100% 100%;
+  left: 0;
+  top: 0;
+}
+
+.switch-button {
+  width: 100px;
+  height: 100px;
+}
+
+.switch-button image {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes rotate {
+	from { transform: rotate(0deg) }
+	to { transform: rotate(360deg) }
 }

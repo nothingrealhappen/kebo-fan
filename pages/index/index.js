@@ -3,16 +3,11 @@
 var app = getApp()
 Page({
   data: {
-    motto: 'Welcome to fan world',
-    userInfo: {},
-    clickTime: 0
+    isActive: false
   },
   //事件处理函数
-  bindViewTap: function() {
-    // wx.navigateTo({
-    //   url: '../logs/logs'
-    // })
-    this.setData({ clickTime: this.data.clickTime + 1 });
+  toggleSwitch: function() {
+    this.setData({ isActive: !this.data.isActive });
   }
 //   onLoad: function () {
 //     console.log('onLoad')

@@ -1,7 +1,13 @@
 <!--index.wxml-->
 <view class="container">
-  <view  bindtap="bindViewTap" class="userinfo">
-    <image class="fan-bg" src="images/fan.png" background-size="cover"></image>
-    <text class="click-time">{{clickTime}}</text>
+  <view class="fan {{ isActive ? 'is-active' : null }}">
+    <view class="fan-bg"></view>
+    <image src="images/fan-stand.png" mode="scaleToFill" class="fan-stand"></image>
+    <image src="images/fan-interal.png" mode="scaleToFill" class="fan-interal"></image>
+    <image src="images/fan-container.png" mode="scaleToFill" class="fan-container"></image>
+  </view>
+  <view class="switch-button" bindtap="toggleSwitch">
+    <image wx:if="{{isActive}}" src="images/switch-on.png" mode="scaleToFill"></image>
+    <image wx:if="{{!isActive}}" src="images/switch-off.png" mode="scaleToFill"></image>
   </view>
 </view>
